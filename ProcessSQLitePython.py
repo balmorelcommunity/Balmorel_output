@@ -8,9 +8,14 @@ Created on Wed Feb  8 14:20:43 2017
 # Import necessary packages
 import sqlite3
 from sqlite3 import OperationalError
+import time
+
+# Start timer to keep track of duration of operations
+start = time.time()
 
 # Settings
 dbName = 'BASE-Results.db'
+
 
 # Create the connection to the sqlite-file
 conn = sqlite3.connect('C:/Users/frwi/Documents/git_repositories/Balmorel_output/BASE-results.db')
@@ -44,6 +49,10 @@ for command in sqlCommands:
         c.execute(command)
     except OperationalError:
         print("Command skipped: ")
+    # Print out timer value after each query execution
+    end = time.time()
+    print(end - start)
+	
     
 # Close the connection to the database - otherwise you cannot access the db-file
 conn.close()
