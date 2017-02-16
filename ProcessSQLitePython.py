@@ -18,7 +18,7 @@ dbName = 'BASE-Results.db'
 
 
 # Create the connection to the sqlite-file
-conn = sqlite3.connect('C:/Users/frwi/Documents/git_repositories/Balmorel_output/BASE-results.db')
+conn = sqlite3.connect('C:/Users/frwi/Documents/balmorel_output_tests/bb4_test/BASE-results.db')
 
 # Do not know what the c is exactly doing, most code following taken from here:
 # http://stackoverflow.com/questions/19472922/reading-external-sql-script-in-python
