@@ -49,11 +49,12 @@ The SQL commands used to manipulate data are created and improved according to t
 
 ## Excel/VBA
 
-Control over the VBA script to the user is provided in the sheet Choose Database. There, two types of options are present and execution buttons can be found.
+Control over the VBA script to the user is provided in the sheet Choose Database. There, several options are present and execution buttons can be found.
 
 1) Control "Query Type to use" refers to the structure of the output database. In a traditional BB1/BB2/BB3 model, the output varibales have one year index. In the new BB4 output format, two year indecis are present, needing a different kind of queries. Using the wrong option here will cause a non-informative error from VBA while attempting to execute the queries.
 2) "Queries to Execute" allows the user to execute specific or all data manipulation queries. Data will be available in Excel for only the data types chosen here.
-3) Select database + Run Queries
+3) Option to limit the output manipulated by only selecting data for some countries (relevant only for very large database tables, i.e more than 10M rows)
+4) Select database + Run Queries
 
 
 * Hardi or Frauke
