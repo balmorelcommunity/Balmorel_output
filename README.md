@@ -10,10 +10,13 @@ This README tells you how to process Balmorel results by sql-queries that can be
 - GAMS version 2x.x or later which includes the gdx2sqlite utility (TO BE SPECIFIED: might be 24.3 but needs verification)
 - Python or MS Excel software
 - Output from Balmorel which is either in classical BB1/BB2/BB3 format in regards of output data domains. For example, the domains of VGE_T in BB1/BB2/BB3 are (in this order): Case, Year, Area, Technology, Season, Timestep. In BB4 the domains are: Case, Year1, Year2, Area, Technology.  In case of any deviation from the number of domains or the order of domains the queries will not be functional.
-- Output from Balmorel in a single .gdx file which includes both output equations and variables as well as sets and parameters used as input.
+- Output from Balmorel in a single .gdx file which includes both output equations and variables as well as sets and parameters used as input. OR in a .db file
 
-## Creating the SQLite database from Balmorel output
+## Creating the SQLite database directly from Balmorel run
+* in balmorel.opt set yes for $setglobal MERGEDSAVEPOINTRESULTS2SQLITE
 
+## Creating the SQLite database from a Balmorel output
+If you do not get the .db file directly from the Balmorel run, you can also convert it afterwards:
 * Convert the Balmorel output gdx-file to a sqlite file with the ending .db following this [explanation of using gdx2sqlite](https://www.gams.com/latest/docs/userguides/mccarl/gdx2sqlite.htm). More detailed explanation: Open a terminal (in windows: search for 'cmd'). Then type
 cd.. <Enter>
 cd.. <Enter>
@@ -23,7 +26,7 @@ gdx2sqlite -i <filepath of the gdx-file> -o <filepath of the sqlite-output-file>
 e.g. gdx2sqlite -i c:\users\frwi\documents\...\BASE-results.gdx -o c:\users\frwi\documents\...\BASE-results.db
 
 * Clone this repository
-* Open either the Python script (.py) on your computer or open the VBA-file, press the button, choose the path of the .db file and happily play with the results
+* Open either the Python script (.py) (not existing yet) on your computer or open the VBA-file, press the button, choose the path of the .db file and happily play with the results
 
 ## Setting up Python
 
@@ -55,6 +58,7 @@ Control over the VBA script to the user is provided in the sheet Choose Database
 2) "Queries to Execute" allows the user to execute specific or all data manipulation queries. Data will be available in Excel for only the data types chosen here.
 3) Option to limit the output manipulated by only selecting data for some countries (relevant only for very large database tables, i.e more than 10M rows)
 4) Select database + Run Queries
+5) Go into a sheet, select "Data" and click "Refresh all" - otherwise the new results do not show up
 
 
 * Hardi or Frauke
