@@ -34,7 +34,8 @@ e.g. gdx2sqlite -i c:\users\frwi\documents\...\BASE-results.gdx -o c:\users\frwi
 
 ## Setting up Excel/VBA
 
-1) The SQLite3 ODBC driver for Excel needs to be installed. The 32-bit version is available at: http://www.ch-werner.de/sqliteodbc/sqliteodbc.exe .
+1) The SQLite3 ODBC driver for Excel needs to be installed. It is crucial to install the correct version (32 or 64 bit) according to the system used. 
+The 32-bit version is available at: http://www.ch-werner.de/sqliteodbc/sqliteodbc.exe .
 In a 64 bit operating system and a 64-bit software package, the 64-bit version of the drivers can be used: http://www.ch-werner.de/sqliteodbc/sqliteodbc_w64.exe
 2) In VBA, ActiveX library has to be activated. From top menu: Tools -> References -> Microsoft ActiveX Data Objects X.X Library (where X.X stands for the newest version available)
  
